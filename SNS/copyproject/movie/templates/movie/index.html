@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}トップページ{% endblock %}
+{% block h1 %}映画レビューアプリ{% endblock %}
+
+{% block content %}
+<div>
+    <div class="test-chenge">
+        <form class="w-50" method="GET" action="{% url 'search' %}">
+            <div class="ttt">
+            <p class="for"><input class="form-control" type="search" name="title" value="{{ title }}" placeholder="キーワード入力"></p>
+            <button type="submit" class="you">検索</button></div>
+            <!-- <p><input class="btn btn-secondary" type="submit" value="検索"></p> -->
+        </form>
+<div class="lp">
+    <div class="oiu">
+        {% for item in query %}
+        <div class="o">
+        <div>
+        <img src="{{ item.thumbnail.url }}" class="img-thumbnail" />
+        </div>
+        <div class="tyu">
+        <p class="duho">{{item.title}}</p>
+        <p>カテゴリ：{{item.category}}</p>
+        <h6>評価：{{item.avg_rating|floatformat:2}}点</h6>
+        <a href="{% url 'detail-movie' item.pk %}"><span class="op">レビューへ>></span></a>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+        {% block h %}
+            {% if request.GET.title %}
+                {# 検索が行われた場合、h1タグ内の "osusume" を非表示にする #}
+            {% else %}
+                <h1 class="osusume">おすすめの映画</h1>
+            {% endif %}
+        {% endblock %}
+    <div class="oiu">
+    {% for item in page_obj2 %}
+    <div class="o">     
+        <div class="pp">
+        <img src="{{ item.thumbnail.url }}" class="img-thumbnail"/>
+        </div>
+        <div class="tyu">
+        <h2 class="duho">{{item.title}}</h2>
+        <h6>カテゴリ：{{item.category}}</h6>
+        <h6>評価：{{item.avg_rating|floatformat:2}}点</h6>
+        <a href="{% url 'detail-movie' item.pk %}"><span class="op">レビューへ>></span></a>
+        </div>
+    </div>  
+    {% endfor %}
+    {% include 'movie/components/pagination2.html' %}
+    </div>
+
+    <div class="ui">        
+    {% block h22 %}
+        {% if request.GET.title %}
+            {# 検索が行われた場合、h1タグ内の "osusume" を非表示にする #}
+        {% else %}
+            <h1 class="osusume">急上昇映画</h2>
+        {% endif %}
+    {% endblock %}
+        
+    <div class="jjk">
+        {% for ranking_movie in page_obj %}
+            {% if forloop.counter < 3 %}
+                <div class="gn">
+                    <img src="{{ ranking_movie.thumbnail.url }}" class="img-thumbnail" />
+                    <div class="tyu">
+                    <h3 class="duho">{{ ranking_movie.title }}</h3>
+                    <h6>カテゴリ：{{ranking_movie.category}}</h6>
+                    <h6>評価：{{ranking_movie.avg_rating|floatformat:2}}点</h6>
+                    <a href="{% url 'detail-movie' ranking_movie.id %}"><span class="op">レビューへ>></span></a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+    </div>
+</div>
+</div>
+{% endblock content %}

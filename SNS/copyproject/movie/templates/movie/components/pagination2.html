@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'movie/css/reset.css' %}">    
+<link rel="stylesheet" type="text/css" href="{% static 'movie/css/style.css' %}">
+{% if page_obj2.has_other_pages %}
+    <ul class="lk">
+        {% if page_obj2.has_previous %}
+            <li class="mae"><a href="?page={{ page_obj2.previous_page_number }}">&lt;&lt;前へ</a></li> 
+        {% else %}
+            <li class="mae1">&lt;&lt;前へ</li>
+        {% endif %}
+        {% if page_obj2.has_next %}
+            <li class="tugi"><a href="?page={{ page_obj2.next_page_number }}">次へ&gt;&gt;</a></li>
+        {% else %}
+            <li class="tugi1">次へ&gt;&gt;</li>
+        {% endif %}
+    </ul>
+{% endif %}

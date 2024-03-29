@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <link rel="stylesheet" type="text/css" href="{% static 'movie/css/style.css' %}">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block content %}
+<h1 class="pgf">ログイン</h1>
+<form method="post" class="jjas">
+    {% csrf_token %}
+    {% for error in form.errors.values %}
+        {{ error }}
+    {% endfor %}
+    <div class="gfd">
+    <label class="mk7">
+        ユーザ ID
+    </label>
+    <input class="jar" name="username">
+    </div>
+    <div class="gfd">
+    <label class="mk7">
+        パスワード
+    </label>
+    <input type="password" class="jar" name="password">
+    </div>
+    <div>
+    <button type="submit" class="psdf">ログインする</button>
+    </div>
+</form>
+{% endblock %}

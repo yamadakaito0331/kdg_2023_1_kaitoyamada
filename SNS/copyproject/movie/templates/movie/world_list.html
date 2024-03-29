@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="osusume">おすすめの洋画</h2>
+
+    {# object_list 内の映画をループで処理 #}
+<div class="laf">
+    {% for movie in object_list %}
+        {% if movie.category2 == "洋画" %}
+        <div class="plh">
+            <img src="{{ movie.thumbnail.url }}" class="img-thumbnail" />
+            <div class="tyu">
+            <h2 class="duho">{{ movie.title }}</h2>
+            <h6>カテゴリ: {{ movie.category }}</h6>
+            <h6>評価: {{ movie.avg_rating|floatformat:2}}点</h6>
+            <a href="{% url 'detail-movie' pk=movie.pk %}"><span class="op">レビューへ>></span></a>
+        </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

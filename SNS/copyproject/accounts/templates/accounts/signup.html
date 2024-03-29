@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="pgf">アカウント作成</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="jjas">
+        <div class="gfd">
+        <input type="text" name="username" class="jar" placeholder="ユーザーID">
+        </div>
+        <div class="gfd">
+        <input type="password" name="password1" class="jar" placeholder="パスワード">
+        </div>
+        <div class="gfd">
+        <input type="password" name="password2" class="jar" placeholder="確認用パスワード">
+        </div>
+        <div>
+        <small class="mb-2 d-block text-start">パスワードは8文字以上で設定してください</small>
+        </div>
+        <div>
+        {% if form.errors %}
+            <span >利用できないユーザーIDやパスワードの可能性があります。入力内容を再度ご確認ください </span>
+        {% endif %}
+        </div>
+        <div>
+        <button type="submit" class="psdf">アカウント作成</button>
+        </div>
+        </div>
+        </div>
+    </form>
+{% endblock %}

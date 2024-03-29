@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}レビュー削除{% endblock %}
+
+{% block content %}
+<div class="omm">
+ <h1 class="lopd">{{object.title}}</h1>
+ <p class="ohhj">評価：{{object.rate}}</p>
+ <p class="tttu">{{object.text}}</p>
+</div>
+    <form class="ullk" method="post">
+        {% csrf_token %}
+        <button type='submit'>このレビューを<span class="gdfg">削除する</span></button>
+    </form>
+{% endblock %}

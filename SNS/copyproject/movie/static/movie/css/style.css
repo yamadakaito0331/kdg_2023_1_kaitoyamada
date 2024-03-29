@@ -1,0 +1,324 @@
+@charset "utf-8";
+a {
+    text-decoration: none;
+}
+img {
+    width: 300px;
+}
+
+.bigtitle {
+    color:  #ffffff;
+    font-weight: bold;
+    font-size: 42.72px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+header {
+    display: flex;
+}
+.rr {
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 889.6px;
+    background-color: black;
+
+}
+.rog1{
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    padding-left: 941.5px;
+}
+.category {
+    display: flex;
+}
+.houga { 
+    font-size: 35px;
+    padding-left: 256px;
+}
+.youga {
+    font-size: 35px;
+    padding-left: 350px;
+}
+.anime {
+    font-size: 35px;
+    padding-left: 350px;
+}
+.ttt {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.you {
+    margin-left: -50px;
+    background-color: black;
+    color: #ffffff;
+    padding: 3px;
+    margin-left: 0.1px;
+}
+.for {
+    border: 3px solid #707070;
+}
+.osusume {
+    font-weight: bold;
+    font-size: 60px;
+}
+.oiu {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.o {
+    flex-basis: 33%;
+}
+.tyu {
+    border: 2px solid #707070;
+    border-radius: 200px;
+}
+.duho{
+    font-size: 20px;
+    font-weight: bold;
+}
+.op{
+    font-weight: bold;
+    color: #479db2;
+}
+.lk {
+    display: flex;
+}
+.tugi {
+    padding-left: 300px;
+    
+}
+.mae{
+    padding-left: 500px;
+}
+.jjk {
+    display: flex;
+    text-align: center; 
+}
+.gn {
+    flex-basis: 50%;
+}
+.detah {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.igt{
+    margin: auto;
+    display: block;
+}
+.lml{
+    background: #525252;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    display: inline-block;
+    font-weight: normal;
+    padding: 7px 12px;
+    margin: 32px  16px;
+}
+.kip{
+    margin-bottom: 78px;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+.tttu {
+    text-align: center;
+    padding-top: 32px;
+}
+.htr{
+    font-size: 30px;
+    font-weight: bold;
+}
+.omm {
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid #327248;
+    border-radius: 20px;
+    background-color: #cfe4d7;
+    margin-bottom: 15px;
+}
+.vgv {
+    padding-left: 60px;
+    font-size: 30px;
+}
+.jjgj {
+    font-weight: bold;
+}
+.vgf {
+    color: #4a69b3;
+}
+.tk {
+    display: flex;
+}
+.btn {
+    font-size: 20px;
+    padding-left: 900px;
+    color: #479db2;
+    font-weight: bold;
+}
+.nll{
+    margin-left: 730px;
+    padding-bottom: 50px;
+    color: #479db2;
+    font-weight: bold;
+}
+.mae {
+    color: #479db2;
+    font-weight: bold;
+}
+.tugi {
+    color: #479db2;
+    font-weight: bold;
+}
+.mae1 {
+    padding-left: 550px;
+    color: #707070;
+}
+.tugi1 {
+    padding-left: 350px;
+    color: #707070;
+}
+.kef{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+    color: #6291ff;
+    font-size: 50px;
+}
+#sbox1{
+    max-width:300px;
+    height:50px;
+    border-radius:2px;
+    outline:0;
+    background:#eee;	
+    }
+#sbox2{
+    max-width:300px;
+    height:50px;
+    border-radius:2px;
+    outline:0;
+    background:#eee;	
+    }
+.btf--orange,
+button.btn--orange {
+    color: #fff;
+    background-color: #39394d;
+    border-radius: 4px;
+}
+.btf--orange:hover,
+button.btn--orange:hover {
+    color: #fff;
+    background: #39398d;
+}
+.jji {
+    text-align: center;
+}
+.bbg {
+    font-size: 50px;
+    font-weight: bold;
+}
+#sbox3{
+    max-width:300px;
+    height:50px;
+    border-radius:2px;
+    outline:0;
+    background:#eee;	
+    }
+#sbox4{
+    max-width:300px;
+    height:50px;
+    border-radius:2px;
+    outline:0;
+    background:#eee;	
+    }
+#sbox5{
+    max-width:300px;
+    padding: 10px;
+    border-radius:2px;
+    outline:0;
+    background:#eee;	
+    }
+
+.laf {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.plh {
+    flex-basis: 33%;
+}
+.my-parts {
+	display: inline-block;
+	transition: all .3s ease 0s;
+	text-decoration: none;
+}
+.my-parts:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+.pgf {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px;
+    font-weight: bold;
+}
+.jjas {
+    display: block;
+    text-align: center;
+}
+.jar {
+    border: 1px solid #707070;
+}
+.gfd {
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+.mk7 {
+    font-weight:bold;
+}
+.psdf {
+    border: 3px dashed #39398d;
+    padding: 10px;
+}
+.gaad{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.jafa{
+    padding-left: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 100px;
+}
+.hyuyh{
+    margin-bottom: 70px;
+}
+.ffx{
+    font-size: 25px;
+}
+.lopd{
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+.ullk{
+    text-align: center;
+}
+.gdfg{
+    font-weight: bold;
+    color: rgb(172, 11, 11);
+}
+.ohhj{
+    text-align: center;
+    font-weight: bold;
+}
+.hyfff{
+    font-weight: bold;
+}

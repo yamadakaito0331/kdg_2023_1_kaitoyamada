@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+    {% block content %}
+        <h2 class="detah">{{ object.title }}</h2>
+        <img src="{{ object.thumbnail.url }}" class="igt" />
+        
+        <p class="tttu">カテゴリー：{{ object.category }}</p>
+        <p class="kip"><span class="lml">あらすじ</span><br><span class="htr">{{ object.text }}</span></p>
+        <div class="tk">
+        <p class="vgv">平均：<span class="jjgj">{{ object.avg_rating|floatformat:2 }}</span></p>
+        <a href="{% url 'review' object.pk %}" class="btn">レビューする>></a>
+        </div>
+        <div>
+            
+            {% for review in object.review_set.all %}
+            <div class="omm">
+                <span class="vgf">{{ review.user.username }}</span>の投稿
+                <h3>{{ review.title }}</h3>
+                <div>
+                    
+                    <h6>評価：<span class="jjgj">{{ review.rate }}</span></h6>
+                    <p>{{ review.text }}</p>
+                </div>
+                <a class="hyfff" href="{% url 'delete-review' review.pk %}">レビューを編集する</a>
+            </div>
+            
+            {% endfor %}
+        </div>
+        <a href="{% url 'index' %}" class="nll"><<一覧へ</a>
+
+    {% endblock content %}
+    </body>
+</html>

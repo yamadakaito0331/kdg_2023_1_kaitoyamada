@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}レビュー投稿{% endblock %}
+{% block h1 %}レビュー投稿{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="jjas">
+        <label>
+            レビューする映画
+        </label>
+        </div>
+        <div class="gaad">
+        <input class="bbg" value="{{movie.title}}" readonly>
+        </div>
+        </div>
+        <div class="jjas">
+        <div class="gfd">
+        <label class="plm">
+            タイトル
+        </label>
+        <input class="form-control" name="title" id="sbox3">
+        </div>
+        <div class="hyuyh">
+        <label class="ffx">
+            本文
+        </label>
+        <textarea class="jafa" name="text" id="sbox4"></textarea>
+        </div>
+        <div class="gfd">
+        <label>
+            星の数
+        </label>
+        <select class="form-control" name="rate" id="sbox5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        </div>
+        </div>
+        <input type="hidden" name='movie' value="{{ movie.id }}">
+        <button type="submit" class="btn btn-success mt-4">投稿する</button>
+    </form>
+{% endblock %}
